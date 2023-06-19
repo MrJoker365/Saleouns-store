@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../static/assest/css/style.css">
+
+  <title>List</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: url(../static/assest/images/gg3.jpg) no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 1260px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .search-bar {
+      margin-bottom: 20px;
+    }
+
+    .search-bar input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border: none;
+      background-color: #fff;
+    }
+
+    .search-bar input[type="submit"] {
+      background-color: #ea1f3d;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .title {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .product-card {
+      background-color: #21252975;
+      border-radius: 4px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+
+    .product-card .image {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 10px;
+    }
+
+    .product-card .title {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .product-card .price {
+      font-size: 16px;
+      font-weight: bold;
+      color: #ea1f3d;
+      margin-bottom: 10px;
+    }
+
+    .product-card .description {
+      font-size: 14px;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+    .wrapper {
+    margin-bottom: 1vh;
+    }
+  </style>
+</head>
+
+<body>
+
+
+<div class="wrapper">
+  <header>
+    <div >
+      <h1>Saleount</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="/">Main</a></li>
+        <li><a href="#">Service</a></li>
+        <!-- <li><a href="#">Block</a></li> -->
+        <li><a href="#" th:text="${name}"></a></li>
+        <li><a href="/log_in">Log in</a></li>
+        <!-- <li><a href="#">Log in</a></li> -->
+      </ul>
+    </nav>
+  </header>
+</div>
+
+
+<div class="container">
+  <div class="search-bar">
+    <form>
+      <input type="text" placeholder="Search..." required>
+      <input type="submit" value="Search">
+    </form>
+  </div>
+
+  <div class="title">All announcements</div>
+
+  <div class="product-card" th:each="el : ${posts}">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c6/Tesla_Model_X_100D_1X7A6736.jpg" alt="Product 1" class="image">
+    <div class="title" th:text="${el.product_name}">Lanos car for sale</div>
+    <div class="price" th:text="${el.price_US}">$5,000</div>
+<!--    <div class="price" >$5,000</div>-->
+    <div class="description" th:text="${el.product_description}">Good condition, low mileage</div>
+    <a th:href="'/list/' + ${el.id}">Тиць</a>   <!--  потім зміню-->
+  </div>
+
+<!--  <div class="product-card">-->
+<!--    <img src="https://example.com/product2.jpg" alt="Product 2" class="image">-->
+<!--    <div class="title">Lanos car parts</div>-->
+<!--    <div class="price">$50</div>-->
+<!--    <div class="description">Various parts available</div>-->
+<!--  </div>-->
+
+<!--  <div class="product-card">-->
+<!--    <img src="https://example.com/product3.jpg" alt="Product 3" class="image">-->
+<!--    <div class="title">Lanos car accessories</div>-->
+<!--    <div class="price">$20</div>-->
+<!--    <div class="description">Upgrade your Lanos with these accessories</div>-->
+<!--  </div>-->
+</div>
+</body>
+
+</html>

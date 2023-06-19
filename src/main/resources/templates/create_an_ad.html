@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create an Ad</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../static/assest/css/style.css">
+
+
+
+  <style>
+    body {
+      background: url(../static/assest/images/gg3.jpg) no-repeat center center fixed;  
+      background-size: cover; 
+      color: #fff;
+    }
+
+    .container {
+      margin-top: 100px;
+    }
+
+    .card {
+      background-color: #21252900;
+    }
+
+    .card-header {
+      background-color: #343a4000;
+      color: #fff;
+    }
+
+    .form-control {
+      background-color: #343a40;
+      color: #fff;
+      border: 1px solid #6c757d;
+    }
+
+    .form-control:focus {
+      background-color: #343a40;
+      color: #fff;
+      border-color: #6c757d;
+      box-shadow: 0 0 0 0.2rem rgba(108, 117, 125, 0.25);
+    }
+
+    .btn-primary {
+      background-color: #007bff;
+      border-color: #007bff;
+    }
+
+    .btn-primary:hover {
+      background-color: #0069d9;
+      border-color: #0062cc;
+    }
+    .wrapper {
+    margin-bottom: 1vh;
+    }
+  </style>
+</head>
+
+
+
+<div class="wrapper">
+  <header>
+    <div >
+      <h1>Saleount</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="/">Main</a></li>
+        <li><a href="#">Service</a></li>
+        <!-- <li><a href="#">Block</a></li> -->
+        <li><a href="#" th:text="${name}"></a></li>
+        <li><a href="/log_in">Log in</a></li>
+        <!-- <li><a href="#">Log in</a></li> -->
+      </ul>
+    </nav>
+  </header>
+</div>
+
+
+
+<body>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-header">
+            Create an Ad
+          </div>
+          <div class="card-body">
+            <form th:action="@{/create_an_ad}" th:object="${newPost}" method="post">
+              <div class="form-group">
+                <label for="product-name">Product Name:</label>
+                <input type="text" class="form-control" id="product-name" name="product_name" placeholder="Enter the product name">
+              </div>
+              <div class="form-group">
+                <label for="category">Category:</label>
+                <select class="form-control" id="category" name="category">
+                  <option value="electronics">Electronics</option>
+                  <option value="clothing">Clothing</option>
+                  <option value="furniture">Furniture</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="product-photo">Product Photo:</label>
+                <input type="file" class="form-control" id="product-photo">
+              </div>
+              <div class="form-group">
+                <label for="product-description">Product Description:</label>
+                <textarea class="form-control" id="product-description" rows="3" name="product_description" placeholder="Enter the product description"></textarea>
+              </div>
+              <div class="form-group">
+                <label for="price">Price $:</label>
+                <input type="text" class="form-control" id="price" name="priсe_US" placeholder="Enter your price $">
+              </div>
+              <div class="form-group">
+                <label for="location">Location:</label>
+                <input type="text" class="form-control" id="location" name="location" placeholder="Enter the location">
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input type="email" class="form-control" id="email" name="email_address" placeholder="Enter your email address">
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="text" class="form-control" id="phone" name="phone_number" placeholder="Enter your phone number">
+              </div>
+              <button type="submit" class="btn btn-primary">Publish</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

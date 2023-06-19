@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../static/assest/css/style.css">
+    <title>Saleount</title>
+</head>
+<body>
+
+
+    <div class="wrapper">
+        <header>
+                <div>
+                    <h1>Saleount</h1>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="/">Main</a></li>
+                        <li><a href="#">Service</a></li>
+                        <!-- <li><a href="#">Block</a></li> -->
+                        <li><a href="#" th:text="${name}"></a></li>
+                        <li><a href="/log_in">Log in</a></li>
+                        <!-- <li><a href="#">Log in</a></li> -->
+                    </ul>
+                </nav>
+        </header>
+        <main>
+            <div>
+                <span>Welcome</span>
+                <span>to</span>
+                <span>saleount</span>
+            </div>
+        </main>
+        <section class="buttons">
+            <a href="/list" class="border-button">Купити</a>
+            <a href="/create_an_ad" class="border-button">Продати</a>
+        </section>
+        <section class="about">
+            <article id="buy">
+                <h2>buy</h2>
+                To buy it you have to... Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi doloremque odit fugit dignissimos at! Ipsa nisi praesentium iusto ipsum error iure officia voluptas, fuga ratione pariatur quis nemo ut illo?
+                Recusandae non deleniti quis rem enim. Porro quae accusamus unde! Beatae perspiciatis sequi, voluptatem consectetur necessitatibus, minima voluptatibus amet laudantium deserunt iste ducimus. Dolores magnam recusandae harum delectus, aliquid error?
+                Laborum qui, eum delectus modi nihil dignissimos iusto, sit soluta corrupti aspernatur natus optio dolor. Aut, laboriosam eos illo, amet, dolore unde quo vero ab doloremque doloribus atque ad ducimus?
+                Perferendis, non saepe? Voluptas, soluta nam. Dignissimos tenetur eveniet beatae, odit, aperiam iste dolorum corrupti iusto ratione et magnam minus. Eveniet, saepe ab. Ducimus eligendi officia sapiente repudiandae nulla ipsum.
+                Distinctio ea voluptatem quia, itaque magnam sunt porro. Voluptate, dolor dolorem, libero enim ipsum atque ducimus earum dolorum nulla veritatis officiis totam vero deleniti? Nesciunt sunt assumenda blanditiis eum vero.
+            </article>
+            <br>
+            <article id="sell">
+                <h2>sell</h2>
+                To sell it you have to... Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi doloremque odit fugit dignissimos at! Ipsa nisi praesentium iusto ipsum error iure officia voluptas, fuga ratione pariatur quis nemo ut illo?
+                Recusandae non deleniti quis rem enim. Porro quae accusamus unde! Beatae perspiciatis sequi, voluptatem consectetur necessitatibus, minima voluptatibus amet laudantium deserunt iste ducimus. Dolores magnam recusandae harum delectus, aliquid error?
+                Laborum qui, eum delectus modi nihil dignissimos iusto, sit soluta corrupti aspernatur natus optio dolor. Aut, laboriosam eos illo, amet, dolore unde quo vero ab doloremque doloribus atque ad ducimus?
+                Perferendis, non saepe? Voluptas, soluta nam. Dignissimos tenetur eveniet beatae, odit, aperiam iste dolorum corrupti iusto ratione et magnam minus. Eveniet, saepe ab. Ducimus eligendi officia sapiente repudiandae nulla ipsum.
+                Distinctio ea voluptatem quia, itaque magnam sunt porro. Voluptate, dolor dolorem, libero enim ipsum atque ducimus earum dolorum nulla veritatis officiis totam vero deleniti? Nesciunt sunt assumenda blanditiis eum vero.
+            </article>
+        </section>
+    </div>
+    <footer>
+        <div class="footer">
+            <div><a href="#"><i class="fab fa-facebook-f fa-3x"></i></a></i></div>
+            <div><a href="#"><i class="fab fa-instagram fa-3x"></i></a></div>
+            <div><a href="#"><i class="fab fa-twitter fa-3x"></i></a></div>
+        </div>
+    </footer>
+</body>
+</html>
